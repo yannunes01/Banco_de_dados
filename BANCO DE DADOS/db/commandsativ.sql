@@ -5,23 +5,25 @@
 -- Defina o tipo de dado de cada coluna (INTEGER ou TEXT).
 -- A tabela produtos deve ter as colunas id, nome, preco
 CREATE TABLE "produtos"(
-    id INTENGER NOT NULL,
+    id INTEGER NOT NULL,
     nome TEXT NOT NULL,
     preco REAL NOT NULL
 );
 -- A tabela clientes deve ter as colunas id, nome, email
 CREATE TABLE "clientes"(
-    id INTENGER NOT NULL,
+    id INTEGER PRIMARY KEY NOT NULL,
     nome TEXT NOT NULL,
     email TEXT NOT NULL
 );
 
 -- A tabela compras deve ter as colunas id, cliente_id, produto_id, data
 CREATE TABLE "compras"(
-    id INTENGER NOT NULL,
-    cliente_id INTENGER NOT NULL,
-    produto_id INTENGER NOT NULL,
-    data TEXT NOT NULL
+    id INTENGER PRIMARY KEY NOT NULL,
+    cliente_id INTEGER NOT NULL,
+    produto_id INTEGER NOT NULL,
+    data TEXT NOT NULL,
+    FOREIGN KEY (cliente_id) REFERENCES "clientes"(id),
+    FOREIGN KEY (produto_id) REFERENCES "produtos"(id)
 );
 
 
