@@ -13,3 +13,11 @@ CREATE TABLE "Disciplinas"(
     "Nome" TEXT NOT NULL,
     "Dia" TEXT NOT NULL
 );
+
+CREATE TABLE "Alunos"(
+    "ID_Aluno" INTEGER NOT NULL PRIMARY KEY,
+    "Nome" TEXT NOT NULL,
+    "Matricula" TEXT NOT NULL,
+    "ID_Disciplina" INTEGER NOT NULL,
+    FOREIGN KEY ("ID_Disciplina") REFERENCES "Disciplinas" 
+);
