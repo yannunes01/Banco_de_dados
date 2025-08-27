@@ -28,3 +28,11 @@ CREATE TABLE "AlunosDisciplinas" (
     FOREIGN KEY ("AlunoID") REFERENCES "Alunos"("ID_Aluno"),
     FOREIGN KEY ("DisciplinaID") REFERENCES "Disciplinas"("ID_Disciplina")
 );
+
+
+INSERT INTO "Disciplinas"
+("ID_Disciplina", "Nome", "Dia")
+VALUES
+(1, 'Matemática', 'Segunda'),
+(2, 'História', 'Terça'),
+(3, 'Geografia', 'Quarta');
