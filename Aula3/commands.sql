@@ -5,8 +5,9 @@ CREATE TABLE "Professores" (
     "ID_Disciplina" INTEGER NOT NULL,
     "Matricula" TEXT NOT NULL,
 
-    FOREIGN KEY ("ID_Disciplina") REFERENCES "Disciplina"
+    FOREIGN KEY ("ID_Disciplina") REFERENCES "Disciplinas"
 );
+DROP TABLE "Professores";
 
 CREATE TABLE "Disciplinas"(
     "ID_Disciplina" INTEGER NOT NULL PRIMARY KEY,
@@ -36,3 +37,12 @@ VALUES
 (1, 'Matemática', 'Segunda'),
 (2, 'História', 'Terça'),
 (3, 'Geografia', 'Quarta');
+
+
+INSERT INTO "Professores"
+("ID_Professor", "Nome", "ID_Disciplina", "Matricula")
+VALUES
+(1, 'Marcos', 2, '2025b'),
+(2, 'Jose', 1, '2025a'),
+(3, 'Claudia', 3, '2025c');
+
