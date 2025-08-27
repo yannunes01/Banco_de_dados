@@ -21,3 +21,10 @@ CREATE TABLE "Alunos"(
     "ID_Disciplina" INTEGER NOT NULL,
     FOREIGN KEY ("ID_Disciplina") REFERENCES "Disciplinas" 
 );
+
+CREATE TABLE "AlunosDisciplinas" (
+    "AlunoID" INTEGER NOT NULL,
+    "DisciplinaID" INTEGER NOT NULL,
+    FOREIGN KEY ("AlunoID") REFERENCES "Alunos"("ID_Aluno"),
+    FOREIGN KEY ("DisciplinaID") REFERENCES "Disciplinas"("ID_Disciplina")
+);
