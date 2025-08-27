@@ -53,3 +53,9 @@ VALUES
 (2, 'Mario', '2025t2'),
 (3, 'Carla', '2025t3');
 
+INSERT INTO "AlunosDisciplinas"
+("AlunoID", "DisciplinaID")
+VALUES
+(1, 1),
+(1, 2),
+(2, 1);
