@@ -8,4 +8,8 @@ CREATE TABLE "Professores" (
     FOREIGN KEY ("ID_Disciplina") REFERENCES "Disciplina"
 );
 
-DROP TABLE "Professores";
+CREATE TABLE "Disciplinas"(
+    "ID_Disciplina" INTEGER NOT NULL PRIMARY KEY,
+    "Nome" TEXT NOT NULL,
+    "Dia" TEXT NOT NULL
+);
